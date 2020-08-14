@@ -1,0 +1,39 @@
+@import "mixins";
+@import "placeholders";
+@import "variables";
+@import "pace"; //pace loading
+@import "alerts";
+@import "form_elements";
+@import "breadcrumb";
+@import "grid";
+@import "buttons";
+@import "sgbadge"; //custom badge
+@import "typography";
+@import "inputs";
+@import "image";
+@import "modal";
+@import "navbar";
+@import "listgroup";
+@import "table";
+@import "card";
+@import "tabs";
+@import "toastr"; //notification
+@import "placeholderload"; //placeholder mask loader - e.g. fb loading
+@import "popover";
+@import "switchtoggle";
+@import "dropdown";
+@import "notifications";
+@import "badge";
+@import "color";
+@import "accordion";
+@import "select";
+@import "mentions"; //mentions tagging
+@import "masonry"; //masonry
+@import "loader"; //loader spinner
+//@import "select2"; //select2
+//@import "bootstrapdialog"; //modal dialog
+@import "nouislider"; //noui slider component
+@import "daterangepicker";
+//@import "bootstraptable"; //daterange or single date selection component
+@import "selectpicker"; //selectpicker dropdown selection component
+@import "misc";

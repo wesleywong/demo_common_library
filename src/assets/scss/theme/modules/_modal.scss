@@ -1,0 +1,42 @@
+.modal-export-import {
+	.modal-header {
+		border-bottom: 1px solid #ddd;
+		height: 55px;
+		padding: 5px 5px 0;
+	}
+	.modal-header > h5 {
+		margin: 0;
+	}
+	.nav-tabs-simple {
+		margin: 0;
+	}
+	.nav-tabs-simple:after {
+		border-bottom: 0;
+	}
+	.nav-tabs-simple > li > a {
+		border-radius: 0!important;
+		height: 50px;
+		line-height: 35px;
+	}
+	.nav-tabs-simple > li > a:after {
+		background-color: transparent;
+	}
+	.nav-tabs-simple > li > a.active {
+		border-left: 1px solid #ddd!important;
+		border-right: 1px solid #ddd!important;
+	}
+	.nav-tabs-simple > li > a.active:after {
+		background-color: #f55753;
+	}
+	.nav-tabs-simple > li > a.active:hover {
+		background-color: white;
+	}
+	.nav-tabs-simple > li > a.active:after,
+	.nav-tabs-simple > li > a:hover:after {
+		height: 2px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+}

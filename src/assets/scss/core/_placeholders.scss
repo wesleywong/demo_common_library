@@ -1,0 +1,32 @@
+%text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+%background-cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+%extend-material-icons {
+  direction: ltr;
+  display: inline-block;
+  font-family: "Material Icons";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+%clearfix {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}

@@ -1,0 +1,165 @@
+@import "../core/mixins";
+@import "../core/placeholders";
+@import "../core/variables";
+.c-form {
+	h5.c-header {
+		border-bottom: 1px solid $color-master-light;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+	}
+	.badge {
+		margin: 0 5px 5px 0;
+	}
+	form {
+		margin-bottom: 30px;
+	}
+	&.bulk-form table form {
+		margin-bottom: 0;
+	}
+	&.bulk-form .form-group .btn-link {
+		font-size: 13px;
+		margin-top:10px!important;
+	}
+	&.bulk-form .form-group .btn-link i {
+		font-size: 18px!important;
+	}
+	.table-infoview {
+		background-color: $greylight;
+		.title {
+			font-family: 'Montserrat';
+			font-size: 10.5px;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			font-weight: 500;
+			margin: 0 0 3px 0;
+		}
+		.text {
+			color: $color-master;
+		}
+		.tag {
+			padding-top: 5px;
+		}
+	}
+	.list-group-info {
+		h5 {
+			font-family: 'Montserrat';
+			font-size: 10.5px;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			font-weight: 500;
+			margin: 0 0 3px 0;
+		}
+		.list-group-item {
+			padding: 5px 10px 0;
+		}
+	}
+	.list-group-horizontal {
+		flex-direction: row;
+		display: flex;
+		li {
+			flex-grow: 1;
+    	flex-basis: 0;
+		}
+	}
+	.form-check-inline {
+		padding: 8px 8px 8px 0;
+	}
+	label.form-check-label {
+		opacity: 1;
+	}
+	.DateRangePickerInput {
+		border: none;
+		background-color: $greylight;
+		.DateInput_input {
+			padding: 7px 0;
+			background-color: $greylight;
+		}
+	}
+}
+
+.bulk-form {
+	input.text-intent:disabled {
+		color: $color-master;
+		font-weight: bold;
+	}
+}
+
+.badge-entity {
+	&.badge {
+		margin: 0 5px 5px 0;
+		padding: 0;
+	}
+	display: inline-block;
+	border: 1px solid $greydefault;
+	background-color: $white;
+	.value, .entity {
+		padding: 5px;
+		display: inline-block;
+	}
+	.value {
+		background-color: $white;
+		border-bottom-right-radius: 10px;
+		border-top-right-radius: 10px;
+		padding: 5px 10px;
+	}
+	.entity {
+		background-color: $darkergrey;
+		color: $white;
+		border-bottom-left-radius: 10px;
+		border-top-left-radius: 10px;
+	}
+}
+
+form.form-import-export {
+	.radio {
+		margin: 5px 0;
+    border: 1px solid #ddd;
+    width: 100%;
+    padding: 5px 10px 3px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+	}
+	.form-group > label {
+	}
+}
+
+.btn.btn-fab-answer {
+	height: 25px!important;
+	width: 25px!important;
+	min-width: 25px!important;
+	& > i {
+		font-size: 18px!important;
+	}
+}
+
+.input-group-tool {
+	position: relative;
+	.btn-tool {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 30px!important;
+		height: 30px!important;
+		line-height: 30px!important;
+		min-width: 30px!important;
+	}
+}
+
+.filter-wrapper {
+	.react-daterange {
+		border: 1px solid hsl(0,0%,80%);
+    padding: 3px 10px;
+    line-height: 30px;
+    height: 38px;
+		background-color: white;
+		position: relative;
+	}
+	.react-daterange > i {
+		position: absolute;
+    left: 10px;
+    top: 10px;
+	}
+	.daterangepickercontainer {
+		margin-left: 25px;
+	}
+}

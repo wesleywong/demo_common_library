@@ -1,0 +1,43 @@
+.test-question {
+  .content-answer {
+    height: auto;
+    .answer {
+      border-bottom: 1px solid #dedede;
+      min-height: 180px;
+      .text-question {
+        color: #2b71b1;
+        cursor: pointer;
+        &:hover {
+          h4 {
+            color: rgb(5, 67, 126);
+          }
+        }
+      }
+    }
+    .one-answer {
+      min-height: 180px;
+      .text-question {
+        border-bottom: 1px solid #dedede;
+        h4 {
+          color: rgb(5, 67, 126);
+        }
+      }
+      .text-question-content {
+        margin-top: 25px;
+      }
+    }
+    .text-question-content {
+      th {
+        color: #000;
+        font-weight: bold;
+      }
+    }
+    div.row {
+      margin-left: 0px !important;
+    }
+    h4 {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+}

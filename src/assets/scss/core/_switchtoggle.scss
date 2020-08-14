@@ -1,0 +1,161 @@
+/*! ========================================================================
+ * Bootstrap Toggle: bootstrap-toggle.css v2.2.0
+ * http://www.bootstraptoggle.com
+ * ========================================================================
+ * Copyright 2014 Min Hur, The New York Times Company
+ * Licensed under MIT
+ * ======================================================================== */
+
+.checkbox label .toggle,
+.checkbox-inline .toggle {
+  margin-left: -20px;
+  margin-right: 5px;
+}
+$toggleWidth: 30px;
+$toggleWidthLg: 40px;
+$toggleHeight: 14px;
+$toggleRadius: 15px;
+$toggleColorTrack: #f99e81;
+.toggle {
+  position: relative;
+  border-radius: $toggleRadius;
+  border: none;
+  min-width: $toggleWidth !important;
+  width: $toggleWidth !important;
+  &[disabled="disabled"] {
+    opacity: 0.7;
+  }
+  &[disabled="disabled"],
+  &[disabled="disabled"].btn,
+  &[disabled="disabled"] .btn {
+    cursor: not-allowed !important;
+  }
+  &.off.btn {
+    background: rgba(0, 0, 0, 0.26) !important;
+    background-color: rgba(0, 0, 0, 0.26) !important;
+  }
+  .wrapper {
+    width: 100%;
+    height: $toggleHeight;
+    top: 0;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+    border-radius: $toggleRadius;
+  }
+}
+.toggle input[type="checkbox"] {
+  display: none;
+}
+.toggle-group {
+  position: absolute;
+  width: 200%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: left 0.35s;
+  -webkit-transition: left 0.35s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.toggle.off .toggle-group {
+  left: -100%;
+}
+.toggle-handle {
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  left: auto;
+  margin: 0 auto;
+  padding: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid $primary;
+  background-color: $primary;
+  box-shadow: 0px 1px 1px #ccc;
+}
+.toggle.off .toggle-handle {
+  right: auto;
+  left: -5px;
+  border-color: $border-color;
+  background-color: $white;
+}
+.toggle-on {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: $toggleColorTrack !important;
+}
+.toggle-off {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.26);
+}
+
+.toggle.btn {
+  min-width: 59px;
+  min-height: $toggleHeight;
+  height: $toggleHeight !important;
+}
+.toggle-on.btn {
+  padding-right: 24px;
+}
+.toggle-off.btn {
+  padding-left: 24px;
+}
+.toggle.btn-lg {
+  .wrapper {
+    height: $toggleHeight + 5;
+  }
+  .toggle-handle {
+    top: -6px;
+  }
+}
+.toggle.btn-lg {
+  min-width: $toggleWidthLg !important;
+  min-height: $toggleHeight + 5 !important;
+}
+.toggle-on.btn-lg {
+  padding-right: 31px;
+}
+.toggle-off.btn-lg {
+  padding-left: 31px;
+}
+.toggle-handle.btn-lg {
+  width: 30px;
+  height: 30px;
+}
+
+.toggle.btn-sm {
+  min-width: 50px;
+  min-height: 30px;
+}
+.toggle-on.btn-sm {
+  padding-right: 20px;
+}
+.toggle-off.btn-sm {
+  padding-left: 20px;
+}
+
+.toggle.btn-xs {
+  min-width: 35px;
+  min-height: 22px;
+}
+.toggle-on.btn-xs {
+  padding-right: 12px;
+}
+.toggle-off.btn-xs {
+  padding-left: 12px;
+}

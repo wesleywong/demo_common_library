@@ -1,0 +1,13 @@
+.badge {
+  font-weight: 500;
+  padding: 5px 8px;
+	@include box-shadow($card-shadow);
+}
+.badge-primary {
+  background-color: $primary;
+  color: $white;
+}
+.badge-outline-white {
+	border: 1px solid $greydefault;
+	background-color: $white;
+}

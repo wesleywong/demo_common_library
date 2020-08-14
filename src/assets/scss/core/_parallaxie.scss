@@ -1,0 +1,57 @@
+.parallaxie {
+}
+
+.demo-parallaxie {
+  position: relative;
+  .heading {
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  h2,
+  .info {
+    color: $white;
+  }
+  .info {
+    font-weight: 300;
+  }
+  .shoe-info {
+    width: 300px;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+  }
+  .ball-info {
+    width: 300px;
+    position: absolute;
+    left: 100px;
+    top: 50px;
+  }
+  .description {
+    font-size: 25px;
+  }
+  .heading-container {
+    display: table;
+    width: 100%;
+  }
+  .content-main {
+    height: 600px;
+    position: relative;
+  }
+  .content-ball {
+    height: 600px;
+    position: relative;
+  }
+  .shoe,
+  .net {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

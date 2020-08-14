@@ -1,0 +1,24 @@
+.popover {
+	z-index: 99999!important;
+  .popover-header {
+    padding: 10px;
+		margin-top: 0;
+		font-family: 'Montserrat';
+  }
+  .popover-body {
+    font-size: $text-cap;
+    padding: 10px;
+  }
+}
+.popover-tooltip {
+	.popover-body {
+		font-size: 12px;
+	}
+	.popover-body .title {
+		font-size: 13px;
+		font-weight: 500;
+	}
+	p {
+		font-size: 12px;
+	}
+}

@@ -1,0 +1,64 @@
+.containers {
+  .form-control-file {
+    display: none;
+  }
+  input#upload_button {
+    width: 100%;
+  }
+  .separator {
+    z-index: auto;
+  }
+}
+
+.btn-ami {
+  border-style: solid;
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 7px 13px;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  &:hover,
+  &:focus {
+    outline: 0;
+  }
+}
+
+.button-fill {
+  border-color: #2b71b1;
+  color: #2b71b1;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 150ms ease-in-out;
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: #2b71b1;
+    z-index: -1;
+    transition: width 150ms ease-in-out;
+  }
+  &:hover:enabled {
+    color: #fff;
+    &:after {
+      width: 110%;
+    }
+  }
+  &:disabled {
+    cursor: no-drop;
+  }
+}

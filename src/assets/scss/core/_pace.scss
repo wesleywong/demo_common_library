@@ -1,0 +1,50 @@
+//page loading
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  z-index: 99999;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: $primary;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+/* Page Loader
+------------------------------------
+*/
+.pace {
+  .pace-progress {
+    height: 3px;
+  }
+  .pace-progress-inner {
+    box-shadow: none;
+  }
+  .pace-activity {
+    -webkit-animation: none;
+    animation: none;
+    top: 73px;
+    background: url("#{$base-img-url}/progress/progress-circle-success.svg")
+      no-repeat top left;
+    background-size: 100% auto;
+    margin: 0 auto;
+    border-width: 0;
+    border-radius: 0;
+    width: 28px;
+    height: 40px;
+    right: 19px;
+    display: none;
+  }
+}

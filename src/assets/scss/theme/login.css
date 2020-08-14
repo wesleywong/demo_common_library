@@ -1,0 +1,319 @@
+/* border radius
+*/
+/* help use by arrow mixins
+*/
+/* with or without border
+*	e.g. @include arrow('right','bottom', 10px, 0px, #4fade3) - right bottom without border
+*	e.g. @include arrow('right','bottom', 10px, 0px, #eee, #4fade3, 6px) - right bottom with border
+*/
+/* media queries
+*	e.g
+	.foo {
+		@include screen(sm) { //max-width
+			width: 22%;
+		}
+		@include screen(xs, min) { //min-width
+			width: 10%;
+		}
+	}
+*/
+/* REM and pixel convertion : USAGE
+h1 {
+	@include font-size(12px);
+}
+*/
+/* animation with keyframes :: USAGE
+@include keyframes(circle1) {
+	0% { top: 8px; }
+	15% { top: 4px; }
+	25% { top: 8px; }
+}
+.element {
+	@include animation('circle1');
+}
+*/
+/* transition
+*/
+/* text color
+*/
+/* padding
+*/
+/* z-index
+*/
+/* hover
+*/
+/* gap
+*/
+/* shadow
+*/
+/* text size
+*/
+/* Layouts */
+html {
+  height: 100%;
+}
+
+/* Body Triggers for layout options
+------------------------------------------------------------------
+*/
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  -moz-osx-font-smoothing: grayscale;
+}
+body.fixed-header .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+body.fixed-header .header .btn-link {
+  cursor: pointer;
+}
+body.fixed-header .sub-header {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  height: 50px;
+  display: none;
+  z-index: 500;
+  background-color: #fafafa;
+}
+body.fixed-header .sub-header .title-info {
+  margin-top: 8px;
+}
+body.fixed-header .sub-header .options {
+  width: 150px;
+  height: 36px;
+}
+body.fixed-header .sub-header .options.sg {
+  width: 130px;
+  padding-top: 9px;
+}
+body.no-header .page-container .page-content-wrapper .content {
+  padding-top: 0px;
+}
+body.no-header .header {
+  border-bottom-color: transparent;
+}
+body.dashboard {
+  background: #f5f5f5;
+}
+body.dashboard .page-container {
+  background: #f5f5f5;
+}
+body.menu-pin .overlay {
+  padding-left: 0;
+}
+body.menu-pin .overlay .overlay-brand {
+  margin-left: 0;
+}
+
+/* Page Container
+------------------------------------
+*/
+.page-container {
+  width: 100%;
+  height: 100%;
+  padding-left: 70px;
+}
+.page-container .page-content-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+.page-container .page-content-wrapper .content {
+  /* Content holder */
+  z-index: 10;
+  padding-top: 60px;
+  padding-bottom: 69px;
+  min-height: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.page-container .page-content-wrapper .content.full-width {
+  width: 100%;
+}
+.page-container .page-content-wrapper .content .content-inner {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  padding-left: 30px;
+  position: relative;
+}
+.page-container .page-content-wrapper .content:only-child {
+  padding-bottom: 0px;
+}
+.page-container .page-content-wrapper .content.overlay-footer {
+  padding-bottom: 0px;
+}
+.page-container .page-content-wrapper .footer {
+  /* Footer */
+  width: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
+}
+.page-container .page-content-wrapper .footer.fixed {
+  position: fixed;
+}
+.page-container .page-content-wrapper .footer .select-lang {
+  width: 180px;
+}
+
+.page-title {
+  margin-top: 0px;
+}
+
+.group-container {
+  white-space: nowrap !important;
+}
+.group-container .single-group {
+  vertical-align: top;
+  display: inline-block;
+  white-space: normal;
+}
+
+.jumbotron {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+.jumbotron .inner {
+  position: relative;
+  z-index: 2;
+}
+.jumbotron.lg {
+  height: 600px;
+}
+.jumbotron .cover-photo {
+  width: 100%;
+  height: inherit;
+  overflow: hidden;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  background-size: cover;
+  background-color: #10cfbd;
+}
+.jumbotron h1 {
+  font-size: 44px;
+}
+
+/* Other overides */
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+}
+
+.copyright {
+  padding: 25px 0 0;
+  border-top: 1px solid fade(#e6e6e6, 70%);
+}
+
+.pager {
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+.login-wrapper {
+  height: 100%;
+  background-color: #ff5722;
+}
+.login-wrapper > * {
+  height: 100%;
+}
+.login-wrapper .background {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover !important;
+  background-position: top center !important;
+  background-repeat: no-repeat !important;
+}
+.login-wrapper .background .backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.login-wrapper .background > img {
+  height: 100%;
+  opacity: 0.6;
+}
+.login-wrapper .login-container {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  float: right;
+}
+.login-wrapper .bg-caption {
+  width: 100%;
+  position: relative;
+  z-index: 200;
+  background-image: -webkit-gradient(
+    linear,
+    left 0%,
+    left 100%,
+    from(rgba(0, 0, 0, 0.1)),
+    to(rgba(0, 0, 0, 0.3))
+  );
+  background-image: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.1),
+    0%,
+    rgba(0, 0, 0, 0.3),
+    100%
+  );
+  background-image: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A000000', endColorstr='#4D000000', GradientType=0);
+}
+
+.register-container {
+  width: 550px;
+  margin: auto;
+  height: 100%;
+}
+
+/* Responsive handlers : Login
+------------------------------------
+*/
+@media (max-width: 768px) {
+  .login-wrapper .login-container {
+    width: 100%;
+  }
+
+  .register-container {
+    width: 100%;
+    padding: 15px;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .login-wrapper .login-container {
+    width: 100%;
+  }
+}

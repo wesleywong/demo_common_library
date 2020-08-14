@@ -1,0 +1,226 @@
+.page-chat {
+	position: fixed;
+  bottom: 0;
+  right: 10px;
+  height: 100%;
+	z-index: 999;
+	.page-chat-logo {
+		position: absolute;
+		bottom: 10px;
+		right: 0;
+		width: 60px;
+		height: 60px;
+		.chat-toggle {
+			width: 100%;
+		  height: 100%;
+			cursor: pointer;
+		  overflow: hidden;
+		  vertical-align: middle;
+		  text-align: center;
+		  border-color: transparent;
+		  border-radius: 50%;
+		  background-color: #fff;
+		  box-shadow: 0px 0px 15px 0px #ccc;
+		}
+	}
+}
+
+$headerHeight: 80px;
+$inputHeight: 55px;
+
+@keyframes aniHide
+{
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;;
+  }
+}
+
+@keyframes aniShow
+{
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;;
+  }
+}
+
+.agent-demo {
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  height: 100%;
+  //box-shadow: 0px 0px 30px -3px #2b303ebd;
+  border: 0;
+  display: block;
+  width: 350px;
+  position: fixed;
+	top: 100%;
+  right: 5px;
+  z-index: 9999;
+  background-color: #f8f8f8;
+	&.on {
+		-webkit-animation: aniShow 1s ease;
+		top: auto;
+	  bottom: 0px;
+	}
+  &.off {
+		top: 100%;
+		-webkit-animation: aniHide 1s ease;
+		//height: 0;
+    .agent-content {
+     // height: 0px;
+      //overflow: hidden;
+      transition: all 0.5s ease-out;
+    }
+    .agent-demo-header {
+      //height: 0px;
+      .agent-demo-header-border {
+       // margin-top: 5px;
+      }
+    }
+  }
+  .agent-content {
+    border: 1px solid #bfc1c4;
+		border-bottom:none;
+    height: calc(100% - #{$headerHeight});
+    transition: height 0.5s ease-out;
+  }
+  .agent-demo-header {
+    height: $headerHeight;
+    width: 100%;
+    margin: auto;
+    background-color: #2b303e;
+    display: table;
+    color: #fff;
+    .agent-demo-header-border {
+      margin: auto;
+      margin-top: 20px;
+      .agent-demo-header-icon {
+        margin-left: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        overflow: hidden;
+        vertical-align: middle;
+        text-align: center;
+        float: left;
+        .fa {
+          color: #ff9800;
+        }
+      }
+      .agent-demo-header-text {
+        margin-left: 80px;
+        padding-top: 5px;
+        font-size: 18px;
+      }
+      .minimise {
+        position: absolute;
+        top: 0;
+        right: 8px;
+        font-weight: bold;
+        width: 25px;
+        text-align: center;
+        height: 30px;
+        cursor: pointer;
+        &:hover {
+          background-color: #7e8496;
+        }
+      }
+    }
+  }
+  .agent-demo-by {
+    display: flex;
+    padding: 5px;
+    border-bottom: 1px solid #efefef;
+    .custom-control {
+      width: 50%;
+    }
+
+    span {
+      width: 50%;
+      text-align: right;
+    }
+
+    .custom-control-label::before {
+      top: 1px;
+    }
+  }
+  .agent-demo-result {
+    height: calc((100% - #{$headerHeight}) - 15px);
+    position: relative;
+    overflow-y: auto;
+    .result-table {
+      height: 100%;
+      min-height: 100%;
+      width: 100%;
+      td {
+        vertical-align: bottom;
+      }
+      .user-request {
+        background-color: #efefef;
+        float: left;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 10px;
+        display: inline-block;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        font-size: 16px;
+        clear: both;
+      }
+      .server-response {
+        color: #ffffff;
+        background-color: #a5d175;
+        float: right;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 10px;
+        display: inline-block;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        font-size: 16px;
+        clear: both;
+        max-width: 80%;
+      }
+    }
+  }
+  .agent-demo-input {
+    height: $inputHeight;
+    border-top: 1px solid lightgray;
+    background-color: white;
+    width: 100%;
+		position: relative;
+    input {
+      width: 85%;
+      border: 0;
+      font-size: 16px;
+      font-weight: 300;
+      height: 53px;
+      margin-left: 10px;
+      margin-right: 10px;
+      &:focus {
+        outline: none;
+      }
+    }
+    .msg_send_btn {
+      background: #05728f none repeat scroll 0 0;
+      border: medium none;
+      border-radius: 50%;
+      color: #fff;
+      cursor: pointer;
+      font-size: 17px;
+      height: 33px;
+      width: 33px;
+			position: absolute;
+			top: 15px;
+			right: 15px;
+    }
+  }
+}
